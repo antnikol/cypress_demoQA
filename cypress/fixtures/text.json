@@ -1,0 +1,20 @@
+{
+  "cartPage": {
+    "cardIsEmpty": "Cart is empty!",
+    "breadCrumbs": "Shopping Cart",
+    "pageUrl": "/view_cart",
+    "pageTitle": "Automation Exercise - Checkout"
+  },
+
+  "Hobbies": [
+    "Sports",
+    "Reading",
+    "Music"
+  ],
+
+  "Gender": [
+    "Male",
+    "Female",
+    "Other"
+  ]
+}
