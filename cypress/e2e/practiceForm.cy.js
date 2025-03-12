@@ -5,12 +5,9 @@ import text from "../fixtures/text.json"
 import genUser from "../fixtures/genUser"
 
 const formsPage = new FormsPage()
-
 const browserName = Cypress.browser.name
 const browserVersion = Cypress.browser.version
-
 const user = genUser.userTestData()
-
 
 describe(`${browserName}. Tests for the sections: Sign Up, Login`, ()=> {
 
