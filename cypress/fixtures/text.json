@@ -16,5 +16,29 @@
     "Male",
     "Female",
     "Other"
+  ],
+
+  "MobilePhone": [
+    "0981112233",
+    "098111",
+    "098111223344"
+  ],
+
+  "State": [
+    "NCR",
+    "Uttar Pradesh",
+    "Haryana",
+    "Rajasthan"
+  ],
+
+  "City": [
+    "Delhi",
+    "Gurgaon",
+    "Noida"
+  ],
+  
+  "Subjects": [
+    "English",
+    "Maths"
   ]
 }

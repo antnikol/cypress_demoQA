@@ -39,14 +39,29 @@ class FormsPage {
   }
 
   selectDateOfBirth(date) {
-    this.getDateOfBirthInput().click();
-    cy.get('.react-datepicker__month-select').select('March');
-    cy.get('.react-datepicker__year-select').select('2025');
-    cy.contains('.react-datepicker__day--010', '10').click();
+    const [day, month, year] = date.split(' ');
+    const months = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    const fullMonth = months.find(m => m.startsWith(month));
+    if (!fullMonth) {
+      throw new Error(`Month ${month} is invalid`);
+    }
+    cy.get('#dateOfBirthInput').click();
+    cy.get('.react-datepicker__year-select').select(year);
+    cy.get('.react-datepicker__month-select').select(fullMonth);
+    const formattedDay = day.padStart(3, '0');  
+    
+    cy.get(`.react-datepicker__day--${formattedDay}`)
+      .not('.react-datepicker__day--outside-month')
+      .should('be.visible')  
+      .click();
   }
+  
 
   fillSubjects(subject) {
-    this.getSubjectsInput().type(subject);
+    this.getSubjectsInput().type(subject).type('{enter}');
   }
 
   selectHobby(hobby) {
