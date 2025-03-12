@@ -17,6 +17,10 @@ class FormsPage {
   getCityDropdown = () => cy.get('#city');
   getSubmitButton = () => cy.get('#submit');
   getSuccessMessage = () => cy.get('.modal-content');
+  getModalWindow = () =>  cy.get('.modal-body')
+  getRadioButton1 = () =>  cy.get('label[for="gender-radio-1"]')
+  getRadioButton2 = () =>  cy.get('label[for="gender-radio-2"]')
+  getRadioButton3 = () =>  cy.get('label[for="gender-radio-3"]')
 
   fillFirstName(firstName) {
     this.getFirstNameInput().type(firstName);
@@ -33,6 +37,7 @@ class FormsPage {
   selectGender(gender) {
     this.getGenderOption(gender).click();
   }
+
 
   fillMobileNumber(mobileNumber) {
     this.getMobileNumberInput().type(mobileNumber);

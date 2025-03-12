@@ -1,9 +1,6 @@
 {
-  "cartPage": {
-    "cardIsEmpty": "Cart is empty!",
-    "breadCrumbs": "Shopping Cart",
-    "pageUrl": "/view_cart",
-    "pageTitle": "Automation Exercise - Checkout"
+  "regForm": {
+    "border-color": "rgb(220, 53, 69)"
   },
 
   "Hobbies": [
@@ -38,6 +35,11 @@
   ],
   
   "Subjects": [
+    "English",
+    "Maths"
+  ],
+
+  "diferentNames": [
     "English",
     "Maths"
   ]

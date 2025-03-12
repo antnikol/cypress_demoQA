@@ -19,7 +19,8 @@ module.exports = {
       zipcode: faker.location.zipCode(),
       state: faker.location.state(),
       city: faker.location.city(),
-      mobile_number: faker.phone.number({ style: 'international' })
+      mobile_number: faker.phone.number({ style: 'international' }),
+      stringLenght50: faker.string.alpha(50)
     }
     return User
   }
